@@ -530,7 +530,7 @@ extension BulletinManager {
                 arrangedSubview.removeFromSuperview()
             }
 
-            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, newArrangedSubviews.first)
+            UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged, argument: newArrangedSubviews.first)
 
             self.viewController.bulletinAppeared()
 
